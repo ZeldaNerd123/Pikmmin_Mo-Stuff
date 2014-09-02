@@ -1,0 +1,62 @@
+tile.blockname.name=Block Name
+item.itemname.name=Item Name
+itemGroup.tabname=Tab Name
+
+tile.EnderCrystal.name=Ender Crystal
+tile.SilverOre.name=Silver Ore
+tile.NecromiteOre.name=Necromite Ore
+
+tile.ChromeOre.name=Chrome Ore
+tile.Endore.name=Endore
+tile.IngeousRock.name=Ingeous Rock Ore
+tile.StarStone.name=Star Stone Ore
+tile.RubyOre.name=Ruby Ore
+tile.AutumnSapling.name=Autumn Sapling
+tile.AutumnOakPlankTiles.name=Autumn Oak Planks Tiles
+tile.AutumnOakLogTiles.name=Autumn Oak Log Tiles
+tile.AutumnLogSlabs.name=Autumn Oak Log Slabs
+tile.AutumnLogSteps.name=Autumn Oak Log Stairs
+tile.AutumnPlanksSlabs.name=Autumn Oak Wood Slabs
+tile.AutumnPlanksSteps.name=Autumn Oak Wood Stairs
+tile.AutumnLogPlank.name=Autumn Oak Planks
+tile.AutumnOakLog.name=Autumn Oak Wood
+tile.AutumnOakLogTiles.name=Autumn Oak Log Tiles
+tile.Log.AutumnOak.name=Autumn Oak
+tile.Leaves.AutumnOak.name=Autumn Oak Leaves
+tile.Sapplings.AutumnOak.name=Autumn Oak Sappling
+
+
+
+
+
+item.Necromite.name=Necromite
+item.Pearl.name=Pearl
+item.Ruby.name=Ruby
+
+item.NecromiteHelm.name=Necromite Helmet
+item.NecromiteChest.name=Necromite Chest Plate
+item.NecromiteLeggings.name=Necromite Leggings
+item.NecromiteBoots.name=Necromite Boots
+item.NecromiteSword.name=Necromite Sword
+item.NecromiteAxe.name=Necromite Axe
+item.NecromitePickaxe.name=Necromite PickAxe
+item.NecromiteShovel.name=Necromite Shovel
+item.NecromiteHoe.name=Necromite Hoe
+
+item.RubyHelm.name=Ruby Helmet
+item.RubyChest.name=Ruby Chest Plate
+item.RubyLeggings.name=Ruby Leggings
+item.RubyBoots.name=Ruby Boots
+item.RubySword.name=Ruby Sword
+item.RubyAxe.name=Ruby Axe
+item.RubyPickAxe.name=Ruby PickAxe
+item.RubyShovel.name=Ruby Shovel
+item.RubyHoe.name=Ruby Hoe
+
+
+
+itemGroup.PikminsBlocks=Pikmin's Blocks
+itemGroup.PikminsItems=Pikmin's Materials
+itemGroup.PikminsDecoration=Pikmin's Decorations
+itemGroup.PikminsCombat=Pikmin's Combat
+itemGroup.PikminsTools=Pikmin's Tools
