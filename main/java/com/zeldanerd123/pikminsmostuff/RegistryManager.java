@@ -55,13 +55,13 @@ public class RegistryManager {
 		GameRegistry.registerBlock(PikminsMoStuff.IgneousRock, "igneous_rock");
 		GameRegistry.registerBlock(PikminsMoStuff.NecromiteOre, "necromite_ore");
 		GameRegistry.registerBlock(PikminsMoStuff.RubyOre, "ruby_ore");
-		GameRegistry.registerBlock(PikminsMoStuff.AutumnLeaves, "autumn_leaves");
-		GameRegistry.registerBlock(PikminsMoStuff.AutumnSapling, "autumn_sapling");
+		
+		
 		GameRegistry.registerBlock(PikminsMoStuff.autumnLogTiles, "autumn_logtiles");
 		GameRegistry.registerBlock(PikminsMoStuff.AutumnWoodTiles, "autumn_woodtiles");
-		GameRegistry.registerBlock(PikminsMoStuff.AutumnWoodPlanks, "autumn_woodplanks");
+		
 		GameRegistry.registerBlock(PikminsMoStuff.autumnLogStairs, "autumn_logStairs");
-		GameRegistry.registerBlock(PikminsMoStuff.AutumnWoodLog, "autumn_woodlog");
+		
 		GameRegistry.registerBlock(PikminsMoStuff.autumnwoodPlanksStairs, "autumn_planksstairs");
 		GameRegistry.registerBlock(PikminsMoStuff.autumnwoodPlanksSlabs, "autumn_plankslabs");
 		GameRegistry.registerBlock(PikminsMoStuff.autumnwoodLogSlabs, "autumn_logslabs");

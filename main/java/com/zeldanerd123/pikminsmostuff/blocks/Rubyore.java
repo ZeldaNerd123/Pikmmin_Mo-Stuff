@@ -15,8 +15,8 @@ import net.minecraft.world.World;
 
 public class Rubyore extends Block {
 
-	public Rubyore(int i, Material p_i45394_1_) {
-		super(p_i45394_1_);
+	public Rubyore(int i, Material rock) {
+		super(rock);
 		this.setBlockTextureName("pikminsmostuff:ruby_ore");
 		this.setBlockName("RubyOre");
 		this.setHarvestLevel("pickaxe", 2);
@@ -31,9 +31,9 @@ public class Rubyore extends Block {
 	}
     private Random rand = new Random();
     @Override
-    public int getExpDrop(IBlockAccess p_149690_1_, int p_149690_5_, int p_149690_7_)
+    public int getExpDrop(IBlockAccess blockAccess, int i, int i)
     {
-        if (this.getItemDropped(p_149690_5_, rand, p_149690_7_) != Item.getItemFromBlock(this))
+        if (this.getItemDropped(i, rand, i2) != Item.getItemFromBlock(this))
         {
             int j1 = 0;
 

@@ -13,7 +13,7 @@ public static final String[] leaves = new String[] { "AutumnOak"};
 		super(block);
 		
 		this.setHasSubtypes(true);
-		this.setCreativeTab(PikminsMoStuff.PikminsDecration);
+		setCreativeTab(PikminsMoStuff.PikminsDecration);
 		
 	}
 	

@@ -168,19 +168,9 @@ public static ProxyCommon proxy;
 		
 		public static Block blockPlanks = new PmsPlank().setBlockName("Planks");
 		
-		public static Block AutumnWoodLog =
-		new AutumnWoodLog(Material.wood);
+		
 	
 		
-		
-	public static Block AutumnLeaves =
-		new AutumnLeaves(Material.leaves);
-	
-	public static BlockBush AutumnSapling =
-		new AutumnSapling(Material.plants);
-	
-	public static Block AutumnWoodPlanks =
-		new AutumnWoodPlanks(Material.wood);
 	
 	public static BlockStairs autumnLogStairs =
 		new AutumnWoodLogStairs(PikminsMoStuff.AutumnWoodLog, 0);
@@ -337,5 +327,3 @@ public PikminsMoStuff(){
 
 }
 }
-
-
