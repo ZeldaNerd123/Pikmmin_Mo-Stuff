@@ -4,6 +4,7 @@ import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class PikminsDecoration extends CreativeTabs {
 
@@ -14,7 +15,7 @@ public class PikminsDecoration extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		// TODO Auto-generated method stub
-		return Item.getItemFromBlock(PikminsMoStuff.AutumnSapling);
+		return Item.getItemFromBlock(PikminsMoStuff.blockSaplings);
 	}
 
 }

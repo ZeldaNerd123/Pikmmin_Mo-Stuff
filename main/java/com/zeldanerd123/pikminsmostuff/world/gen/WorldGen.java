@@ -3,6 +3,7 @@ package com.zeldanerd123.pikminsmostuff.world.gen;
 import java.util.Random;
 
 import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
+import com.zeldanerd123.pikminsmostuff.biome.featured.trees.WorldGenAutumnOakTree;
 import com.zeldanerd123.pikminsmostuff.world.gen.featured.EndGenMinable;
 import com.zeldanerd123.pikminsmostuff.world.gen.featured.NetherGenMinable;
 import com.zeldanerd123.pikminsmostuff.world.gen.featured.NetherLavaMinable;
@@ -30,13 +31,13 @@ public class WorldGen implements IWorldGenerator {
 			int Xcoords = x + random.nextInt(16);
 			int Ycoords = random.nextInt(256);
 			int Zcoords = z + random.nextInt(16);
-			new EndGenMinable(PikminsMoStuff.Endore, 10).generate(world, random, Xcoords, Ycoords, Zcoords);
+			new EndGenMinable(PikminsMoStuff.EndOre, 10).generate(world, random, Xcoords, Ycoords, Zcoords);
 				}
 		for(int end = 0; end < 13; end++){
 			int Xcoords = x + random.nextInt(16);
 			int Ycoords = random.nextInt(256);
 			int Zcoords = z + random.nextInt(16);
-			new EndGenMinable(PikminsMoStuff.Starstone, 10).generate(world, random, Xcoords, Ycoords, Zcoords);
+			new EndGenMinable(PikminsMoStuff.StarstoneOre, 10).generate(world, random, Xcoords, Ycoords, Zcoords);
 				}
 		for(int end = 0; end < 11; end++){
 			int Xcoords = x + random.nextInt(16);
@@ -52,6 +53,7 @@ public class WorldGen implements IWorldGenerator {
 			int Ycoords = random.nextInt(256);
 			int Zcoords = z + random.nextInt(16);
 			new WorldGenMinable(PikminsMoStuff.RubyOre, 10).generate(world, random, Xcoords, Ycoords, Zcoords);
+			new WorldGenAutumnOakTree(PikminsMoStuff.blockLogs, PikminsMoStuff.blockleaves, 0, 0, true, 5, 30, false).generate(world, random, Xcoords, Ycoords, Zcoords);
 				}
 	}
 //Nether

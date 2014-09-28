@@ -23,6 +23,8 @@ public class RegistryManager {
 		GameRegistry.registerItem(PikminsMoStuff.Necromite, "necromite");
 		GameRegistry.registerItem(PikminsMoStuff.Pearl, "pearl");
 		GameRegistry.registerItem(PikminsMoStuff.Ruby, "ruby");
+		GameRegistry.registerItem(PikminsMoStuff.obsidianShard, "obsidian_shard");
+		
 			//Weapons, tools, Armour
 		GameRegistry.registerItem(PikminsMoStuff.NecromiteSword, "necromite_sword");
 		GameRegistry.registerItem(PikminsMoStuff.NecromiteAxe, "necromite_axe");
@@ -48,10 +50,10 @@ public class RegistryManager {
 	public static void addBlockRegistery() {
 		GameRegistry.registerBlock(PikminsMoStuff.ChromeOre, "chrome_ore");
 		GameRegistry.registerBlock(PikminsMoStuff.SilverOre, "silver_ore");
-		GameRegistry.registerBlock(PikminsMoStuff.Endore, "endore");
+		GameRegistry.registerBlock(PikminsMoStuff.EndOre, "endore");
 		
 		GameRegistry.registerBlock(PikminsMoStuff.EnderCrystal, "ender_crystal");
-	   	GameRegistry.registerBlock(PikminsMoStuff.Starstone, "starstone");
+	   	GameRegistry.registerBlock(PikminsMoStuff.StarstoneOre, "starstone");
 		GameRegistry.registerBlock(PikminsMoStuff.IgneousRock, "igneous_rock");
 		GameRegistry.registerBlock(PikminsMoStuff.NecromiteOre, "necromite_ore");
 		GameRegistry.registerBlock(PikminsMoStuff.RubyOre, "ruby_ore");

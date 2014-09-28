@@ -125,10 +125,10 @@ public class CraftManager {
 	    
 	    
 // 		-------------------------------Blocks--------------------------------------------
-	   GameRegistry.addShapelessRecipe(new ItemStack(PikminsMoStuff.AutumnWoodPlanks, 4), 
-			   new Object[] { PikminsMoStuff.AutumnWoodLog});
+	   GameRegistry.addShapelessRecipe(new ItemStack(PikminsMoStuff.blockPlanks, 4), 
+			   new Object[] { new ItemStack(PikminsMoStuff.blockLogs, 0, 1)});
 	    
-
+	   
 
 	    GameRegistry.addShapedRecipe(new ItemStack(PikminsMoStuff.autumnLogStairs, 4),
 	    		new Object[] { "W  ", "WW ", "WWW",
@@ -137,30 +137,29 @@ public class CraftManager {
 
 
 	    GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1), 
-	    		new Object[] { "WW", "WW", 'W', 
-	    			PikminsMoStuff.AutumnWoodPlanks });
+	    		new Object[] { "WW", "WW", 'W', new ItemStack(Blocks.wool, 1, 5)});
 	    	
 
 
 	    GameRegistry.addRecipe(new ItemStack(Items.stick, 4), 
 	    		new Object[] { "W", "W",
-	    			'W', PikminsMoStuff.AutumnWoodPlanks });
+	    			'W', PikminsMoStuff.blockPlanks });
 	    
 
 	    GameRegistry.addRecipe(new ItemStack(PikminsMoStuff.autumnwoodPlanksStairs, 4), 
 	    		new Object[] { "W  ", "WW ", "WWW", 
-	    			'W', PikminsMoStuff.AutumnWoodPlanks });
+	    			'W', PikminsMoStuff.blockPlanks });
 	    
 
 
 	    GameRegistry.addRecipe(new ItemStack(PikminsMoStuff.autumnwoodLogSlabs, 4),
 	    		new Object[] { "WWW", 'W', 
-	    			PikminsMoStuff.AutumnWoodLog });
+	    			new ItemStack(PikminsMoStuff.blockLogs, 1, 0) });
 	    
 
 	    GameRegistry.addRecipe(new ItemStack(PikminsMoStuff.autumnwoodPlanksSlabs, 4), 
 	    		new Object[] { "WWW", 'W', 
-	    			PikminsMoStuff.AutumnWoodPlanks });
+	    			PikminsMoStuff.blockPlanks });
 	    
 
 	    GameRegistry.addRecipe(new ItemStack(PikminsMoStuff.AutumnWoodTiles, 4),
@@ -171,8 +170,7 @@ public class CraftManager {
 	    GameRegistry.addRecipe(new ItemStack(PikminsMoStuff.autumnLogTiles, 4), 
 	    		new Object[] { "WW",
 	    			'W', PikminsMoStuff.autumnwoodLogSlabs });
-	    
-	    
+
 	  }
 	  
 	 
