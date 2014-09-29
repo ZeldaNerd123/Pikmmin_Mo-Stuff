@@ -1,6 +1,8 @@
 package com.zeldanerd123.pikminsmostuff;
 
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockCarpet;
@@ -14,6 +16,7 @@ import net.minecraft.block.BlockWood;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -23,11 +26,14 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsPortal;
+import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.mcreator_pmsDimension;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsLeaves;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsLog;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsPlank;
@@ -81,22 +87,33 @@ import com.zeldanerd123.pikminsmostuff.world.gen.WorldGen;
 import com.zeldanerd123.pikminsmostuff.RegistryManager;
 import com.zeldanerd123.pikminsmostuff.CraftManager;
 
+import cpw.mods.fml.common.IFuelHandler;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = References.ModId,
 	version = References.version, name = References.modname,
 		canBeDeactivated = true)
-public class PikminsMoStuff
+public class PikminsMoStuff implements IFuelHandler, IWorldGenerator
 {
 	public static final String MODID = References.ModId;
 
+	
+	@Instance(MODID)
+    public static PikminsMoStuff instance;
+
+	public mcreator_pmsDimension mcreator_0 = new mcreator_pmsDimension();
+	
+	
+	
 		//crativetabs
 		public static CreativeTabs PikminsBlocks = 
 				new PikminsBlocks(CreativeTabs.getNextID(), 
@@ -255,12 +272,20 @@ public static ProxyCommon proxy;
 		
 		public static Item RubyBoots = new RubyArmor(8, RubyArmour, 0,3, "Ruby").setUnlocalizedName("RubyBoots").setCreativeTab(PikminsCombat).setUnlocalizedName("RubyBoots").setTextureName(MODID +":ruby_boots");
 
+
+
+
 		/*
 		 ---------------------------------Dimension Stuff---------------------------------------
 		 */
 			
-	    //public static final PmsPortal pmsPortal = (PmsPortal)Block.blockRegistry.getObject("portal");			
-			
+		public static int dimensionId = 56;
+
+
+		public static Block pmsPortalBlock = new PmsPortal();
+		
+
+		
 		/*
 		 -----------------------------End Dimension Stuff---------------------------------------
 		*/
@@ -268,7 +293,7 @@ public static ProxyCommon proxy;
 
 
 @EventHandler
-public void init(FMLInitializationEvent event){
+public void preInit(FMLPreInitializationEvent event){
 	ChromeOre = new ChromeOre(500, Material.rock);
 	SilverOre = new SilverOre(501, Material.rock);	
 	EndOre = new Endore(502, Material.rock);
@@ -291,17 +316,39 @@ public void init(FMLInitializationEvent event){
 	autumnLogTiles = new AutumnLogTiles(Material.wood);
 	
 	
+	mcreator_0.instance = this.instance;
+	mcreator_0.preInit(event);
+	proxy.registerRenderers(this);
+	
+	
+	
 	CraftManager.MainClass();
 	RegistryManager.MainClass();
 }
 public void load(FMLInitializationEvent event)
 {
-	proxy.registerRenderInformation();
+	proxy.registerRenderInformation(this);
 }
 public void preLoad(FMLPreInitializationEvent event) {
 
 }
 
-//GameRegistry
+@Override
+public int getBurnTime(ItemStack fuel) {
+if(mcreator_0.addFuel(fuel)!=0) return mcreator_0.addFuel(fuel);
+return 0;
+}
+@Override
+public void generate(Random random, int chunkX, int chunkZ, World world,
+		IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+	
+	chunkX = chunkX * 16;
+	chunkZ = chunkZ * 16;
+	if(world.provider.dimensionId==-1)mcreator_0.generateNether(world, random, chunkX, chunkZ);
+	if(world.provider.dimensionId==0)mcreator_0.generateSurface(world, random, chunkX, chunkZ);
 
+	
+
+	
+}
 }

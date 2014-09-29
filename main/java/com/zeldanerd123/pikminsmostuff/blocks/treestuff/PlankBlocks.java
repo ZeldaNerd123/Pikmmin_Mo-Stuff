@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 
 public class PlankBlocks extends ItemBlock{
 	
-	public static final String[] Planks = new String[] { "AutumnOak"};
+	public static final String[] Planks = new String[] { "AutumnOak", "Loftwood"};
 	
 	public PlankBlocks(Block block) {
 		super(block);

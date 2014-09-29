@@ -18,10 +18,10 @@ import net.minecraft.util.IIcon;
 
 public class PmsPlank extends Block
 {
-    public static final String[] woodPlankType= new String[] {"autumn"};
+    public static final String[] woodPlankType= new String[] {"autumn", "loftwood", "whiteoak"};
     @SideOnly(Side.CLIENT)
     private IIcon[] planks;
-    private static final String __OBFID = "CL_00000335";
+    //private static final String __OBFID = "CL_00000335";
 
     public PmsPlank()
     {

@@ -29,7 +29,7 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class PmsSapling extends BlockSapling{
-	public static final String[] sapling = new String[] {"_autumn_oak"};
+	public static final String[] sapling = new String[] {"_autumn_oak","_loft_wood","_white_oak"};
     private static final IIcon[] saplingIcon= new IIcon[sapling.length];
     
 

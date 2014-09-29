@@ -1,8 +1,12 @@
 package com.zeldanerd123.pikminsmostuff.lib;
 
+import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
+
 public class ProxyClient extends ProxyCommon{
-	public void registerRenderInformation(){
-		
+	@Override
+	public void registerRenderers(PikminsMoStuff ins) {
+		ins.mcreator_0.registerRenderers();
+
 	}
 
 }

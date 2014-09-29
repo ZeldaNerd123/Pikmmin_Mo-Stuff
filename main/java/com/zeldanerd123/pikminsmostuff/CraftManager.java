@@ -125,8 +125,8 @@ public class CraftManager {
 	    
 	    
 // 		-------------------------------Blocks--------------------------------------------
-	   GameRegistry.addShapelessRecipe(new ItemStack(PikminsMoStuff.blockPlanks, 4), 
-			   new Object[] { new ItemStack(PikminsMoStuff.blockLogs, 0, 1)});
+	   GameRegistry.addRecipe(new ItemStack(PikminsMoStuff.blockPlanks, 4, 1), 
+			   new Object[] {"w", 'w', new ItemStack(PikminsMoStuff.blockLogs, 1, 1)});
 	    
 	   
 

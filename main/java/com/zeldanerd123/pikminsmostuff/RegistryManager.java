@@ -1,5 +1,9 @@
 package com.zeldanerd123.pikminsmostuff;
 
+import net.minecraftforge.common.DimensionManager;
+
+import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsChunkProvider;
+import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsWorldProvider;
 import com.zeldanerd123.pikminsmostuff.blocks.treestuff.LeafBlocks;
 import com.zeldanerd123.pikminsmostuff.blocks.treestuff.LogBlocks;
 import com.zeldanerd123.pikminsmostuff.blocks.treestuff.PlankBlocks;
@@ -72,7 +76,9 @@ public class RegistryManager {
 		GameRegistry.registerBlock(PikminsMoStuff.blockSaplings, SapplingBlocks.class, PikminsMoStuff.blockSaplings.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(PikminsMoStuff.blockPlanks, PlankBlocks.class, PikminsMoStuff.blockPlanks.getUnlocalizedName().substring(5));
 
-		
-		
+			
+		GameRegistry.registerBlock(PikminsMoStuff.pmsPortalBlock, PikminsMoStuff.MODID + (PikminsMoStuff.pmsPortalBlock.getUnlocalizedName().substring(5)));
+		DimensionManager.registerProviderType(PikminsMoStuff.dimensionId, PmsWorldProvider.class, false);
+		DimensionManager.registerDimension(PikminsMoStuff.dimensionId, PikminsMoStuff.dimensionId);
 	}
 }
