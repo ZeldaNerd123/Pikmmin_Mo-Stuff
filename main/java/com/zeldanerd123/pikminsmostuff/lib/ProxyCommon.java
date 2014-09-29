@@ -7,3 +7,4 @@ import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
 		public void registerRenderers(PikminsMoStuff ins) {
 			
 		}
+}
