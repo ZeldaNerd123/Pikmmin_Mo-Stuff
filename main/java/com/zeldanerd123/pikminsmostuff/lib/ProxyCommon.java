@@ -1,4 +1,4 @@
-	package com.zeldanerd123.pikminsmostuff.lib;
+?	package com.zeldanerd123.pikminsmostuff.lib;
 
 import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
 	
@@ -7,9 +7,3 @@ import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
 		public void registerRenderers(PikminsMoStuff ins) {
 			
 		}
-
-		public void registerRenderInformation(PikminsMoStuff pikminsMoStuff) {
-			// TODO Auto-generated method stub
-			
-		}
-	}

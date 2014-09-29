@@ -38,9 +38,6 @@ import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsLeaves;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsLog;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsPlank;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsSapling;
-//import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsChuckGen;
-//import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsPortal;
-//import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsProvider;
 import com.zeldanerd123.pikminsmostuff.blocks.ore.AmethystOre;
 import com.zeldanerd123.pikminsmostuff.blocks.ore.ChromeOre;
 import com.zeldanerd123.pikminsmostuff.blocks.ore.EnderCrystal;
@@ -107,10 +104,7 @@ public class PikminsMoStuff implements IFuelHandler, IWorldGenerator
 	public static final String MODID = References.ModId;
 
 	
-	@Instance(MODID)
-    public static PikminsMoStuff instance;
-
-	public mcreator_pmsDimension mcreator_0 = new mcreator_pmsDimension();
+	
 	
 	
 	
@@ -315,10 +309,7 @@ public void preInit(FMLPreInitializationEvent event){
 	autumnwoodLogSlabs = new AutumnLogSlabs(Material.wood);
 	autumnLogTiles = new AutumnLogTiles(Material.wood);
 	
-	
-	mcreator_0.instance = this.instance;
-	mcreator_0.preInit(event);
-	proxy.registerRenderers(this);
+
 	
 	
 	
@@ -327,28 +318,9 @@ public void preInit(FMLPreInitializationEvent event){
 }
 public void load(FMLInitializationEvent event)
 {
-	proxy.registerRenderInformation(this);
+	proxy.registerRenderInformation(t
 }
 public void preLoad(FMLPreInitializationEvent event) {
 
 }
 
-@Override
-public int getBurnTime(ItemStack fuel) {
-if(mcreator_0.addFuel(fuel)!=0) return mcreator_0.addFuel(fuel);
-return 0;
-}
-@Override
-public void generate(Random random, int chunkX, int chunkZ, World world,
-		IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-	
-	chunkX = chunkX * 16;
-	chunkZ = chunkZ * 16;
-	if(world.provider.dimensionId==-1)mcreator_0.generateNether(world, random, chunkX, chunkZ);
-	if(world.provider.dimensionId==0)mcreator_0.generateSurface(world, random, chunkX, chunkZ);
-
-	
-
-	
-}
-}
