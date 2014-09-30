@@ -32,12 +32,11 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.util.EnumHelper;
 
-import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsPortal;
-import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.mcreator_pmsDimension;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsLeaves;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsLog;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsPlank;
 import com.zeldanerd123.pikminsmostuff.biome.featured.trees.PmsSapling;
+import com.zeldanerd123.pikminsmostuff.biome.featured.dimension.PmsPortal;
 import com.zeldanerd123.pikminsmostuff.blocks.ore.AmethystOre;
 import com.zeldanerd123.pikminsmostuff.blocks.ore.ChromeOre;
 import com.zeldanerd123.pikminsmostuff.blocks.ore.EnderCrystal;
@@ -99,11 +98,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid = References.ModId,
 	version = References.version, name = References.modname,
 		canBeDeactivated = true)
-public class PikminsMoStuff implements IFuelHandler, IWorldGenerator
+public class PikminsMoStuff
 {
 	public static final String MODID = References.ModId;
 
-	
 	
 	
 	
@@ -129,7 +127,7 @@ public class PikminsMoStuff implements IFuelHandler, IWorldGenerator
 				new PikminsTools(CreativeTabs.getNextID(), 
 					"PikminsTools");
 	//world gen
-		public static WorldGen worldGen = new WorldGen();
+		public static WorldGen worldGen;
 		
 @SidedProxy (clientSide = References.client,
 				serverSide = References.common)
@@ -309,6 +307,8 @@ public void preInit(FMLPreInitializationEvent event){
 	autumnwoodLogSlabs = new AutumnLogSlabs(Material.wood);
 	autumnLogTiles = new AutumnLogTiles(Material.wood);
 	
+	worldGen = new WorldGen();
+	
 
 	
 	
@@ -318,10 +318,11 @@ public void preInit(FMLPreInitializationEvent event){
 }
 public void load(FMLInitializationEvent event)
 {
-	proxy.registerRenderInformation(t
+	
 }
 public void preLoad(FMLPreInitializationEvent event) {
 
 }
+
 
 }

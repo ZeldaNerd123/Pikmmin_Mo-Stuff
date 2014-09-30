@@ -31,7 +31,7 @@ public class PmsLeaves extends BlockLeaves{
 	 public PmsLeaves(Material leaves2) {
 		this.setCreativeTab(PikminsMoStuff.PikminsDecration);
 	}
-
+	 @Override
 	protected void func_150124_c(World world, int x, int y, int z, int side, int meta)
 	    {
 	        if ((side & 3) == 1 && world.rand.nextInt(meta) == 0)
@@ -44,6 +44,7 @@ public class PmsLeaves extends BlockLeaves{
 	    /**
 	     * Determines the damage on the item the block drops. Used in cloth and wood.
 	     */
+	 	@Override
 	    public int damageDropped(int i)
 	    {
 	        return super.damageDropped(i) + 4;
@@ -52,6 +53,7 @@ public class PmsLeaves extends BlockLeaves{
 	    /**
 	     * Get the block's damage value (for use with pick block).
 	     */
+	 	@Override
 	    public int getDamageValue(World world, int x, int y, int z)
 	    {
 	        return world.getBlockMetadata(x, y, z) & 3;
@@ -61,6 +63,7 @@ public class PmsLeaves extends BlockLeaves{
 	    /**
 	     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	     */
+	 	@Override
 	    @SideOnly(Side.CLIENT)
 	    public void getSubBlocks(Item item, CreativeTabs tabs, List list)
 	    {
@@ -68,7 +71,7 @@ public class PmsLeaves extends BlockLeaves{
 				list.add(new ItemStack(item, 1, i));
 			}
 	    }
-
+	 	@Override
 		@SideOnly(Side.CLIENT)
 	    public void registerBlockIcons(IIconRegister iconRegister)
 	    {

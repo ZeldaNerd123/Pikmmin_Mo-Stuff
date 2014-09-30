@@ -15,8 +15,8 @@ public class PmsPortal extends BlockPortal
 	public PmsPortal()
 	{
 		super();
-		setBlockName("portalTutorialBlock");
-		setCreativeTab(CreativeTabs.tabBlock);
+		setBlockName("PmsPortal");
+		setCreativeTab(PikminsMoStuff.PikminsDecration);
 	}
 
 	@Override
@@ -47,17 +47,17 @@ public class PmsPortal extends BlockPortal
 	}
 
 	@Override
-	public boolean func_150000_e(World par1World, int par2, int par3, int par4)
+	public boolean func_150000_e(World world, int x, int y, int z)
 	{
 		byte b0 = 0;
 		byte b1 = 0;
 
-		if (par1World.getBlock(par2 - 1, par3, par4) == Blocks.sandstone || par1World.getBlock(par2 + 1, par3, par4) == Blocks.sandstone)
+		if (world.getBlock(x - 1, y, z) == PikminsMoStuff.blockPlanks || world.getBlock(x + 1, y, z) == PikminsMoStuff.blockPlanks)
 		{
 			b0 = 1;
 		}
 
-		if (par1World.getBlock(par2, par3, par4 - 1) == Blocks.sandstone || par1World.getBlock(par2, par3, par4 + 1) == Blocks.sandstone)
+		if (world.getBlock(x, y, z - 1) == PikminsMoStuff.blockPlanks || world.getBlock(x, y, z + 1) == PikminsMoStuff.blockPlanks)
 		{
 			b1 = 1;
 		}
@@ -68,10 +68,10 @@ public class PmsPortal extends BlockPortal
 		}
 		else
 		{
-			if (par1World.isAirBlock(par2 - b0, par3, par4 - b1))
+			if (world.isAirBlock(x - b0, y, z - b1))
 			{
-				par2 -= b0;
-				par4 -= b1;
+				x -= b0;
+				z -= b1;
 			}
 
 			int l;
@@ -85,12 +85,12 @@ public class PmsPortal extends BlockPortal
 
 					if (l != -1 && l != 2 || i1 != -1 && i1 != 3)
 					{
-						Block j1 = par1World.getBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l);
-						boolean isAirBlock = par1World.isAirBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l);
+						Block j1 = world.getBlock(x + b0 * l, y + i1, z + b1 * l);
+						boolean isAirBlock = world.isAirBlock(x + b0 * l, y + i1, z + b1 * l);
 
 						if (flag)
 						{
-							if (j1 != Blocks.sandstone)
+							if (j1 != PikminsMoStuff.blockPlanks)
 							{
 								return false;
 							}
@@ -107,7 +107,7 @@ public class PmsPortal extends BlockPortal
 			{
 				for (i1 = 0; i1 < 3; ++i1)
 				{
-					par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, PikminsMoStuff.pmsPortalBlock, 0, 2);
+					world.setBlock(x + b0 * l, y + i1, z + b1 * l, PikminsMoStuff.pmsPortalBlock, 0, 2);
 				}
 			}
 
@@ -116,12 +116,12 @@ public class PmsPortal extends BlockPortal
 	}
 
 	@Override
-	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5)
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
 	{
 		byte b0 = 0;
 		byte b1 = 1;
 
-		if (par1World.getBlock(par2 - 1, par3, par4) == this || par1World.getBlock(par2 + 1, par3, par4) == this)
+		if (world.getBlock(x - 1, y, z) == this || world.getBlock(x + 1, y, z) == this)
 		{
 			b0 = 1;
 			b1 = 0;
@@ -129,44 +129,44 @@ public class PmsPortal extends BlockPortal
 
 		int i1;
 
-		for (i1 = par3; par1World.getBlock(par2, i1 - 1, par4) == this; --i1)
+		for (i1 = y; world.getBlock(x, i1 - 1, z) == this; --i1)
 		{
 			;
 		}
 
-		if (par1World.getBlock(par2, i1 - 1, par4) != Blocks.sandstone)
+		if (world.getBlock(x, i1 - 1, z) != PikminsMoStuff.blockPlanks)
 		{
-			par1World.setBlockToAir(par2, par3, par4);
+			world.setBlockToAir(x, y, z);
 		}
 		else
 		{
 			int j1;
 
-			for (j1 = 1; j1 < 4 && par1World.getBlock(par2, i1 + j1, par4) == this; ++j1)
+			for (j1 = 1; j1 < 4 && world.getBlock(x, i1 + j1, z) == this; ++j1)
 			{
 				;
 			}
 
-			if (j1 == 3 && par1World.getBlock(par2, i1 + j1, par4) == Blocks.sandstone)
+			if (j1 == 3 && world.getBlock(x, i1 + j1, z) == PikminsMoStuff.blockPlanks)
 			{
-				boolean flag = par1World.getBlock(par2 - 1, par3, par4) == this || par1World.getBlock(par2 + 1, par3, par4) == this;
-				boolean flag1 = par1World.getBlock(par2, par3, par4 - 1) == this || par1World.getBlock(par2, par3, par4 + 1) == this;
+				boolean flag = world.getBlock(x - 1, y, z) == this || world.getBlock(x + 1, y, z) == this;
+				boolean flag1 = world.getBlock(x, y, z - 1) == this || world.getBlock(x, y, z + 1) == this;
 
 				if (flag && flag1)
 				{
-					par1World.setBlockToAir(par2, par3, par4);
+					world.setBlockToAir(x, y, z);
 				}
 				else
 				{
-					if ((par1World.getBlock(par2 + b0, par3, par4 + b1) != Blocks.sandstone || par1World.getBlock(par2 - b0, par3, par4 - b1) != this) && (par1World.getBlock(par2 - b0, par3, par4 - b1) != Blocks.sandstone || par1World.getBlock(par2 + b0, par3, par4 + b1) != this))
+					if ((world.getBlock(x + b0, y, z + b1) != PikminsMoStuff.blockPlanks || world.getBlock(x - b0, y, z - b1) != this) && (world.getBlock(x - b0, y, z - b1) != PikminsMoStuff.blockPlanks || world.getBlock(x + b0, y, z + b1) != this))
 					{
-						par1World.setBlockToAir(par2, par3, par4);
+						world.setBlockToAir(x, y, z);
 					}
 				}
 			}
 			else
 			{
-				par1World.setBlockToAir(par2, par3, par4);
+				world.setBlockToAir(x, y, z);
 			}
 		}
 	}

@@ -9,20 +9,21 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 public class PmsWorldProvider extends WorldProvider
 {
+	@Override
 	public void registerWorldChunkManager()
 	{
-		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.desertHills, 0.1F);
+		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.mesaPlateau, 0.1F);
 		this.dimensionId = PikminsMoStuff.dimensionId;
 	}
-	
+	@Override
 	public IChunkProvider createChunkGenerator()
 	{
-		return new PmsChunkProvider(worldObj, worldObj.getSeed());
+		return new PmsChunkProvider(worldObj, worldObj.getSeed(), false);
 	}
 	
 	@Override
 	public String getDimensionName()
 	{
-		return "Tutorial";
+		return "TesterDimension";
 	}
 }

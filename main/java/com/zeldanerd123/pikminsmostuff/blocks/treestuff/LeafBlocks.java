@@ -3,20 +3,21 @@ package com.zeldanerd123.pikminsmostuff.blocks.treestuff;
 import com.zeldanerd123.pikminsmostuff.PikminsMoStuff;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class LeafBlocks extends ItemBlock{
-public static final String[] leaves = new String[] { "AutumnOak", "LoftWood"};
+public static final String[] leaves = new String[] { "AutumnOak", "LoftWood", "WhiteOak"};
 	
 	public LeafBlocks(Block block) {
 		super(block);
 		
 		this.setHasSubtypes(true);
-		setCreativeTab(PikminsMoStuff.PikminsDecration);
+		this.setCreativeTab(PikminsMoStuff.PikminsDecration);
 		
 	}
-	
+	@Override
 	public String getUnlocalizedName(ItemStack stack){
 		int i = stack.getItemDamage();
 		if (i < 0 ||i >= leaves.length){
@@ -27,7 +28,6 @@ public static final String[] leaves = new String[] { "AutumnOak", "LoftWood"};
 		return super.getUnlocalizedName() + "." + leaves[i];
 		
 	}
-	
 	
 	public int getMetaData (int meta){
 		
