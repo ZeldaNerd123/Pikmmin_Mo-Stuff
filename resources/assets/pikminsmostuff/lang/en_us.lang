@@ -1,0 +1,64 @@
+tile.blockname.name=Block Name
+item.itemname.name=Item Name
+itemGroup.tabname=Tab Name
+
+tile.ender_crystal.name=Ender Crystal
+tile.silver_ore.name=Silver Ore
+tile.necromite_ore.name=Necromite Ore
+
+tile.chrome_ore.name=Chrome Ore
+tile.end_ore.name=End Ore
+tile.igneous_rock.name=Igneous Rock
+tile.starstone_ore.name=Starstone Ore
+tile.ruby_ore.name=Ruby Ore
+tile.autumn_sapling.name=Autumn Sapling
+tile.autumn_oak_plank_tiles.name=Autumn Oak Planks Tiles
+tile.autumn_oak_log_tiles.name=Autumn Oak Log Tiles
+tile.autumn_log_slabs.name=Autumn Oak Log Slabs
+tile.autumn_log_steps.name=Autumn Oak Log Stairs
+tile.AutumnPlanksSlabs.name=Autumn Oak Wood Slabs
+tile.AutumnPlanksSteps.name=Autumn Oak Wood Stairs
+tile.AutumnLogPlank.name=Autumn Oak Planks
+tile.AutumnOakLog.name=Autumn Oak Wood
+tile.AutumnOakLogTiles.name=Autumn Oak Log Tiles
+tile.Log.AutumnOak.name=Autumn Oak
+tile.Leaves.AutumnOak.name=Autumn Oak Leaves
+tile.sapplings.autumn_oak.name=Autumn Oak Sappling
+
+item.necromite.name=Necromite
+item.pearl.white.name=White Pearl
+item.pearl.roseline.name=Roseline Pearl
+item.pearl.purple.name=Purple Pearl
+item.pearl.dark_green.name=Dark Green Pearl
+item.pearl.midnight_blue.name=Midnight Blue Pearl
+item.pearl.gold.name=Gold Pearl
+item.pearl.grey.name=Grey Pearl
+item.pearl.black.name=Black Pearl
+item.ruby.name=Ruby
+item.igneous.name=Igneous
+
+item.necromite_helm.name=Necromite Helmet
+item.necromite_chest.name=Necromite Chest Plate
+item.necromite_leggings.name=Necromite Leggings
+item.necromite_boots.name=Necromite Boots
+item.necromite_sword.name=Necromite Sword
+item.necromite_axe.name=Necromite Axe
+item.necromite_pickaxe.name=Necromite PickAxe
+item.necromite_shovel.name=Necromite Shovel
+item.necromite_hoe.name=Necromite Hoe
+
+item.ruby_helm.name=Ruby Helmet
+item.ruby_chest.name=Ruby Chest Plate
+item.ruby_leggings.name=Ruby Leggings
+item.ruby_boots.name=Ruby Boots
+item.ruby_sword.name=Ruby Sword
+item.ruby_axe.name=Ruby Axe
+item.ruby_pickAxe.name=Ruby Pickaxe
+item.ruby_shovel.name=Ruby Shovel
+item.ruby_hoe.name=Ruby Hoe
+
+itemGroup.pmsB=Pikmin's Blocks
+itemGroup.pmsC=Pikmin's Combat
+itemGroup.pmsD=Pikmin's Decorations
+itemGroup.pmsM=Pikmin's Materials
+itemGroup.pmsT=Pikmin's Tools

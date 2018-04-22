@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "item/generated"
+  },
+
+  "variants": {
+    "white": [{"model": "pikminsmostuff:item/white_pearl"}],
+    "black" : [{"textures": {"layer0": "pikminsmostuff:items/white_pearl"} }],
+    "purple" : [{"model": "pikminsmostuff:purple_pearl"}],
+    "type": {
+      "1":   {"textures": {"layer0": "pikminsmostuff:items/white_pearl"} },
+      "2":  {"textures": {"layer0": "pikminsmostuff:items/white_pearl"} }
+    }
+  }
+}
+{

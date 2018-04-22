@@ -1,0 +1,16 @@
+{
+    "parent":"item/handheld",
+    "textures": {
+        "layer0":"pikminsmostuff:items/white_pearl"
+    },
+    "overrides": [
+        { "predicate": { "type": 0 }, "model": "pikminsmostuff:item/white_pearl" },
+		{ "predicate": { "type": 1 }, "model": "pikminsmostuff:item/roseline_pearl" },
+		{ "predicate": { "type": 2 }, "model": "pikminsmostuff:item/purple_pearl" },
+		{ "predicate": { "type": 3 }, "model": "pikminsmostuff:item/dark_green_pearl" },
+		{ "predicate": { "type": 4 }, "model": "pikminsmostuff:item/midnight_blue_pearl" },
+		{ "predicate": { "type": 5 }, "model": "pikminsmostuff:item/gold_pearl" },
+		{ "predicate": { "type": 6 }, "model": "pikminsmostuff:item/grey_pearl" },
+		{ "predicate": { "type": 7 }, "model": "pikminsmostuff:item/black_pearl" }
+	]
+}
